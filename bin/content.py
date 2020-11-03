@@ -13,10 +13,11 @@ def generate():
     for f_name in os.listdir():
         if f_name in white_folder_list:
             content_dict[f_name] = []
+            # 取得所有檔案名稱
             md_name_list = [md_name.split('.')[0]
                             for md_name in os.listdir(f_name)]
-
-            md_url_list = ['{}/{}/{}'.format(git_url, f_name, md_name)
+            # 產生超連結網址
+            md_url_list = ['{}/{}/{}'.format(git_url, f_name, md_name.replace(' ', '%20'))
                         for md_name in os.listdir(f_name)]
             for i, md_name in enumerate(md_name_list):
                 content_line = '\t1. [{}]({})'.format(md_name, md_url_list[i])
