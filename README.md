@@ -4,7 +4,9 @@
 
 # Content
 
-- Reading
-    
-    1. [Article_name](Artical_url)
+- reading
+
+	1. [Data scientist roadmap](https://github.com/ShemYu/learning-resource/blob/master/reading/Data scientist roadmap.md)
+
+	1. [資料科學五大 Q&A：如何成為資料科學家？資料科學產業的未來？](https://github.com/ShemYu/learning-resource/blob/master/reading/資料科學五大 Q&A：如何成為資料科學家？資料科學產業的未來？.md)
 
