@@ -1,10 +1,10 @@
 # Abstract 
 
-用來整理學習資源之 Repo.，包含網站上好文、論文等之讀書心得
+用來整理學習資源之 Repo.，包含網站上好文、論文等之讀書心得。
 
 # Content
 
-- reading
+- Reading
 
 	1. [Data scientist roadmap](https://github.com/ShemYu/learning-resource/blob/master/reading/Data%20scientist%20roadmap.md)
 

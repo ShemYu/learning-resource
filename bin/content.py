@@ -25,7 +25,8 @@ def generate():
 
     content = '# Content\n\n'
     for section in content_dict:
-        content += '- {}\n\n'.format(section)
+        section_upper = section[0].upper()+section[1:]
+        content += '- {}\n\n'.format(section_upper)
         content += '\n\n'.join(content_dict[section])
         content += '\n\n'
     
