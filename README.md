@@ -12,6 +12,10 @@
 
 	- 從文本當中超連結自動爬入字串，以較為泛用的方式前處理並提取關鍵詞
 
+- [ ] Google sheets api
+
+	- 簡易資料庫串接
+
 # Contents
 
 - Reading
