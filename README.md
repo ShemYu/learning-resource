@@ -4,6 +4,8 @@
 
 ## Todo
 
+- [ ] 整合 onenote 筆記至此
+
 - [ ] 優化bin/content.py
 	
 	- 辨別多層式目錄，藉此分類文章
