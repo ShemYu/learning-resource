@@ -56,5 +56,29 @@ $ python {*.py or path/u/want}
 
 例如 **test_eat()** 就會是針對 **eat()** 做的單元測試
 
-## 
+而一個好維護的測試目錄結構，應與被測試之 Module 相對應。
 
+    ├ src
+    |   ├ target_module
+    |       ├ __init__.py
+    |       ├ package_1.py
+    |       ├ package_2.py
+    |
+    ├ tests
+        ├ test_taget_module
+            ├ test_package_1.py
+            ├ test_package_2.py
+# More about Pytest
+
+## Just using ```assert```
+
+Pytest 在撰寫測試程式時，Pytest 繼承並覆寫了 Python 原生的 assert keyword 使之提供更多詳細資訊。
+
+```python
+def test_value_is_correct():
+    a = get_value()
+    b = 'CorrectValue'
+    assert a == b
+```
+
+當 assert 判斷式回傳結果為 False 時便會判斷為測試失敗。
