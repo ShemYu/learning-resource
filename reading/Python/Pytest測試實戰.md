@@ -16,7 +16,7 @@
 1. 原生 assert 的運用，相較 unittest 彈性許多
 
 1. 可以運行 unittest, nose 撰寫的測試程式
-
+---
 ## Test strategy
 
 - 單元測試
@@ -36,7 +36,7 @@
 - 功能測試
 
     測試系統當中的功能運行
-
+---
 ## 執行
 
 直接執行 ```pytest``` 會從當前目錄及子目錄搜尋 **test_** 開頭或 **_test** 結尾的測試函數進行測試
@@ -52,7 +52,7 @@ $ python {*.py or path/u/want}::{function_name or ClassName}
 $ python {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
 ```
 也可透過關鍵詞
-
+---
 ## General naming rules
 
 1. 測試程式以 **test_** 開頭或 **_test** 結尾
@@ -75,7 +75,7 @@ $ python {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
         ├ test_taget_module
             ├ test_package_1.py
             ├ test_package_2.py
-
+---
 ## Testing result type
 
 測試結果分為以下四種
@@ -83,7 +83,7 @@ $ python {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
 |---|---|---|---|---|---|
 |說明| 通過| 失敗|預期會失敗<br>且結果失敗| 預期失敗<br>但結果通過| 跳過|
 
-
+---
 # More about Pytest
 
 ## Just using ```assert```
@@ -98,7 +98,7 @@ def test_value_is_correct():
 ```
 
 當 assert 判斷式回傳結果為 False 時便會判斷為測試失敗。
-
+---
 ## Expecting Exception
 
 當有一些測試我們想以預期特定 input 會帶來特定 Exception 時，可以藉由預期錯誤的方式去撰寫測試。
@@ -119,7 +119,7 @@ def test_of_something():
 ```
 
 上述範例利用 ```with``` 字句抓取測試時遇到 ```ValueError``` 的情況，儲存資訊至 excinfo 並從 value 當中取出 error message，最後利用 ```assert``` 字句比對是否是期望的失敗結果。
-
+---
 ## Keyword testing
 
 依據指定 keyword 進行測試
@@ -129,3 +129,8 @@ $ pytest -k _raise
 ```
 
 上述指令會找到測試名稱包含 '_raise' 的方法進行測試
+
+# Pytest coverage
+
+## Abstract
+
