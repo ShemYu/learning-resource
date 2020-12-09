@@ -1,8 +1,8 @@
-# Pytest coverage
+# Pytest-cov
 
 ## Abstract 
 
-Pytest plugin for testing coverage report.
+pytest-cov 是
 
 ## Run
 
@@ -22,7 +22,7 @@ pytest --cov={path_for_testing_coverage} {tests_path}
 
 ## Pytest-cov's argumentations
 
-|argumentation|Description|
+|Options|Description|
 |---|---|
 |--cov-report|report type<br> =term-missing : print line num of missing.<br>=html : Save the result as a index.html, default save at './htmlcov'.<br>=xml : save report as xml.<br>|
 |--cov-cofing|Select the file of configs, and run coverage with configs.|

@@ -5,15 +5,24 @@
 
 ## What is Pytest, Why Pytest
 
-一個強大好用的 Pytest 測試用 module
+[Pytest](https://docs.pytest.org/en/3.0.1/contents.html) 是一款 Python 的測試框架，而 [Pytest-cov](https://pypi.org/project/pytest-cov/) 則是 Pytest 的一個 Plugin，提供測試覆蓋度相關，方便的功能模組。
+
+Pytest 有以下幾項優點：
+
+1. 簡單編寫
+
+    原生 assert 的運用
+
+    ```python
+    # Pytest
+    assert a == b
+    # unittest
+    self.assertEqual(a, b)
+    ```
 
 1. 可讀性強
 
 1. 易上手
-
-1. 簡單編寫
-
-1. 原生 assert 的運用，相較 unittest 彈性許多
 
 1. 可以運行 unittest, nose 撰寫的測試程式
 ---
@@ -39,31 +48,61 @@
 ---
 ## 執行
 
-直接執行 ```pytest``` 會從當前目錄及子目錄搜尋 **test_** 開頭或 **_test** 結尾的測試函數進行測試
-```bash
-$ pytest
-```
-亦可指定測試程式/目錄，以及透過```::```指定欲測試的方法或類別
-```bash
-$ python {*.py or path/u/want}::{function_name or ClassName}
-```
-或甚至指定類別當中的特定方法
-```bash
-$ python {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
-```
-也可透過關鍵詞
+- 從指定目錄偵測偵測測試程式並執行，若未指定則是從根目錄開始偵測
+
+    - 偵測方式 : 
+        
+        從當前目錄底下搜尋 ```test_``` 開頭或是 ```_test``` 結尾之測試程式檔案進行測試
+        
+
+    ```bash
+    $ pytest {Options} {test_path}
+    ```
+
+- 指定目錄
+
+    透過```::```指定程式當中的方法或類別，可同時指定多個目錄或檔案
+
+    ```bash
+    $ python {*.py or path/u/want}::{function_name or ClassName}
+    ```
+    或甚至指定類別當中的特定方法
+    ```bash
+    $ pytest {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
+    ```
+    例如
+    ```
+    $ pytest tests/creature/animal.py::Dog::eat
+    ```
+
+
+- Options of pytest
+
+    |Options |Description|
+    |---|---|
+    |--collect-only| 不實際執行測試，而是依據命令先行列出全部會執行的**測試程式**|
+    |-v, --verbose| 印出詳細測試細節|
+    |-k| 使用給訂的 substring 去查找所有 functions, classes 當中，<br>名稱包含該 substring 的執行測試，可使用 and, or, not 等基本邏輯閘<br>例如 : ```pytest -k "asdict not defaults"```|
+    |-m| 指定運行藉由 pytest decorator 自定義的標籤底下之測試程式，有別於目錄可用自定義的維度橫向串聯測試方法<br>例如 : ``` pytest -m project_1``` 會執行藉由 ```@pytest.mark.project_1``` 標記的測試方法 |
+    |-x, --exitfirst| 測試進行中只要出現 **FAILED** 便停止測試|
+    |--maxfail=num| 測試進行中只要出現之 **FAILED** 達到門檻值 num 便停止測試|
+    |--capture=(no or sys or fd)| no : 關閉所有輸出的擷取<br>sys : 擷取 sys.stdout/stderr<br>fd : 當 file descriptor 為 1 or 2 則輸出至臨時文件|
+    |-s| --capture=no 的縮寫|
+    |--lf, --lastfailed| 上一輪測試失敗的優先測試，且若失敗後停止測試|
+    |--ff, --failed-first| 上一輪測試失敗的優先測試，且運行全部其他測試|
+    |-q, --quiet| 簡化輸出結果，與 -v 效果相反|
+    |-l, --showlocals| 顯現局部變數以及他的值，詳細列出測試錯誤可能的點跟原因|
+    |--tb=style|style 分為以下六種 : <br>1. `--tb=no` : 不印出任何錯誤回朔信息<br>2. `--tb=line` : 印出程式碼行號<br>3. `--tb=short` : 印出摘要型的錯誤回朔信息<br>4. `--tb=long` : 印出最為詳細的錯誤回朔信息<br>5. `--tb=auto` : 僅印出第一個及最後一個錯誤的詳細錯誤回朔信息<br> 6. `--tb=native` : 僅輸出 Python 標準庫錯誤回朔信息|
+    |--duration=N| 會印出 N 個耗時最久的測試，及其階段 (call, setup, teardown)|
+    |--version| 印出 pytest 版本|
+    |-h, --help| 印出 pytest help 資訊|
+
+<br>
+
 ---
-## General naming rules
+## 測試目錄結構
 
-1. 測試程式以 **test_** 開頭或 **_test** 結尾
-
-1. 測試 function 以 **test_** 開頭
-
-1. 測試之類別以 **Test** 開頭
-
-例如 **test_eat()** 就會是針對 **eat()** 做的單元測試
-
-而一個好維護的測試目錄結構，應與被測試之 Module 相對應。
+為了便於維護，測試目錄結構應與被測試之 Module 相對應。
 
     ├ src
     |   ├ target_module
@@ -78,10 +117,13 @@ $ python {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
 ---
 ## Testing result type
 
-測試結果分為以下四種
-||Passed| Failed| xFailed| xPassed| Skipped|
-|---|---|---|---|---|---|
-|說明| 通過| 失敗|預期會失敗<br>且結果失敗| 預期失敗<br>但結果通過| 跳過|
+Pytest 會逐測試程式當中每個 function ，依照測試結果標記為以下六種結果類別：
+|Type|PASSED|FAILED|SKIPPED|XFAIL|XPASS|ERROR|
+|---|---|---|---|---|---|---|
+|Description| 通過測試| 未通過測試| 跳過測試| 預期測試未通過<br>且測試未通過| 預期測試未通過<br>但測試通過| 測試用例以外的代碼觸發了錯誤|
+
+<br>
+
 
 ---
 # More about Pytest
