@@ -99,6 +99,20 @@ Pytest 有以下幾項優點：
 
 <br>
 
+- Setting default options
+
+    [pytest.ini](https://docs.pytest.org/en/stable/customize.html) 可在 .ini 中 `[pytest]` 底下 `addopts` 設置預設的 options
+    ```ini
+    # pytest.ini
+    [pytest]
+    minversion = 6.0
+    addopts = -ra -q
+    testpaths =
+        tests
+        integration
+    ``` 
+
+
 ---
 ## 測試目錄結構
 
@@ -124,6 +138,11 @@ Pytest 會逐測試程式當中每個 function ，依照測試結果標記為以
 
 <br>
 
+XPASS 的定義較為模糊，可以在 pytest.ini 中設定為嚴格模式，將 XPASS 視為 FAILED。
+```ini
+[pytest]
+xfail_strict=true
+```
 
 ---
 # More about Pytest
