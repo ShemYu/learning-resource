@@ -7,6 +7,7 @@ Pytest plugin 之一，能提供方便功能撰寫並檢查 docstring，使 sphi
 
 一個多人合作的專案勢必有撰寫文件的需求，現已有非常方便的文件自動生成 module (如 [Sphinx - get started](https://www.sphinx-doc.org/en/master/usage/quickstart.html))，從 docstring 自動化生成文件的方式也提升了文件品質的重要性，尤其是當中的測試範例，而 `doctest` 正是針對 docstring 當中 example code 的格式、結果進行測試。
 
+---
 ## Python test example in docstring
 
 [doctest - Python 3.9.1 document](https://docs.python.org/3/library/doctest.html)
@@ -123,7 +124,61 @@ def factorial(n):
     return result
 ```
 
+doctest 就是把其中的 example code 拿出做測試，檢查 docstring 是否符合規定，本文則是使用 [pytest plugin doctest-plus](https://github.com/astropy/pytest-doctestplus) 執行範例代碼測試。
 
+---
+## About base rule of writing example code
+
+1. 預期輸出, Expected output
+
+    當我們在範例代碼當中寫了一段程式後，如何判斷測試成功呢？就是去比對輸出結果與預期輸出結果是否相同，而預期輸出結果則是直接撰寫在 docstring 當中，如下：
+    ```python
+    """
+    Example: 
+        >>> john = {}
+        >>> john['age'] = 20
+        >>> print(john['age'])
+        20
+    """
+    ```
+    
+    當執行 doctest 時便會去偵測 `print(john['age'])` 結果與預期的 `20` 是否相符，若相符則回傳 PASSED
+    
+
+1. 執行符號 `>>>` 後需要有一個空白鍵
+
+    ```python
+    """
+    Example: 
+        >>> import os
+           ^
+           Must have it!
+    """
+    ```
+
+1. 以 `...` 區分生命週期
+    
+    如 `for` 迴圈
+    ```python
+    """python
+    Example:
+        >>> for a in range(10):
+        ...     print(a)
+    """
+    ```
+    `list` 展開式
+    ```python
+    """
+    Example:
+        >>> list_a = [
+        ...     {...},
+        ...     {...},
+        ...     {...}
+        ... ]
+    """
+    ```
+
+---
 # pytest-doctestplus 的四大優勢
 
 ## Floating point comparision
