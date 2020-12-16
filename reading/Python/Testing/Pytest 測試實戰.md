@@ -138,7 +138,28 @@ Pytest 會逐測試程式當中每個 function ，依照測試結果標記為以
 
 <br>
 
-XPASS 的定義較為模糊，可以在 pytest.ini 中設定為嚴格模式，將 XPASS 視為 FAILED。
+### **skip**
+```python
+@pytest.mark.skip(reason="not done")
+def test_function_1():
+    do something
+```
+### **skipif**
+```python
+@pytest.mark.skipif(version < "0.2.0", reason="not support until ver. 0.2.0")
+def test_function_2():
+    do something
+```
+
+### **xfail**
+預期測試失敗，例如想測試是否輸入錯誤的變數型態、
+```python
+@pytest.mark.xfail(reason="not done")
+def test_function_1():
+    do something
+```
+
+也由於 XPASS 的定義較為模糊，可以在 pytest.ini 中設定為嚴格模式，將 XPASS 視為 FAILED。
 ```ini
 [pytest]
 xfail_strict=true
@@ -157,8 +178,8 @@ def test_value_is_correct():
     b = 'CorrectValue'
     assert a == b
 ```
-
 當 assert 判斷式回傳結果為 False 時便會判斷為測試失敗。
+
 ---
 ## Expecting Exception
 
@@ -180,14 +201,45 @@ def test_of_something():
 ```
 
 上述範例利用 ```with``` 字句抓取測試時遇到 ```ValueError``` 的情況，儲存資訊至 excinfo 並從 value 當中取出 error message，最後利用 ```assert``` 字句比對是否是期望的失敗結果。
+
 ---
-## Keyword testing
 
-依據指定 keyword 進行測試
+## Parametrized testing
 
-```bash
-$ pytest -k _raise
+When testing some method should repeatly call the same method, you can use pytest decorater `@pytest.mark.parametrize` to loop the same method with different parameters.
+
+當有些較為繁瑣，必須重複執行的測試，需要藉由 testcase 完整覆蓋測試邏輯時，可以藉由 `@pytest.mark.parametrize` 對同一個 method 迴圈輸入指定的參數。
+
+```python
+import ptest
+@pytest.mark.parametrize('num', [1, 2, 3, 4, 5, 6, 7, 8, 9])
+def test_is_odd(num):
+    assert num%2 == 0
 ```
 
-上述指令會找到測試名稱包含 '_raise' 的方法進行測試
+You can assign multi arguments for sure.
 
+當然也可以輸入多個參數。
+
+```python
+@pytest.mark.parametrize('num1, num2', 
+                        [
+                            (1, 2),
+                            (3, 4),
+                            (5, 6)
+                        ]
+                        )
+def test_add(num1, num2):
+    assert add(num1, num2) == num1+num2
+```
+
+## Fixture 
+
+fixture 是提供 pytest 測試前後配置的模塊，提供完整的測試配置、銷毀方法，一班藉由裝飾器 `@pytest.fixture()` 調用，也可以設置在 project/tests/conftest.py 當中。
+
+conftest.py 也可以不只存在一個，conftest 生命週期為其所在位置之子目錄，可以把其視為該層級底下之 fixture 倉庫。
+
+
+# Configuration of pytest
+
+Setti
