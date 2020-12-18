@@ -89,3 +89,5 @@ ubuntu           trusty   99ec81b80c55  4 weeks ago  266 MB
 # Reference
 
 1. [《Docker —— 從入門到實踐­》正體中文版](https://philipzheng.gitbook.io/docker_practice/introduction)
+
+1. [Docker 10 大 QA](https://www.ithome.com.tw/news/91847)
