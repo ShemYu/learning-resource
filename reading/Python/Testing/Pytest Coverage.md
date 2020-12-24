@@ -22,17 +22,17 @@ pytest --cov={path_for_testing_coverage} {tests_path}
 
 ## Pytest-cov's argumentations
 
-|Options|Description|
-|---|---|
-|--cov-report|report type<br> =term-missing : print line num of missing.<br>=html : Save the result as a index.html, default save at './htmlcov'.<br>=xml : save report as xml.<br>|
-|--cov-cofing|Select the file of configs, and run coverage with configs.|
+| Options      | Description                                                                                                                                                           |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --cov-report | report type<br> =term-missing : print line num of missing.<br>=html : Save the result as a index.html, default save at './htmlcov'.<br>=xml : save report as xml.<br> |
+| --cov-cofing | Select the file of configs, and run coverage with configs.                                                                                                            |
 
 
 # Report definition
 
-|Column| Definition|
-|---|---|
-|Stmts |refers to the number of statements in your code.|
-|Miss |refers to the number of statements that have not been run.|
-|Cover |is test coverage, or (Stmts - Miss) / 100.|
-|Missing| contains the line numbers of the Miss statements.|
+| Column  | Definition                                                 |
+| ------- | ---------------------------------------------------------- |
+| Stmts   | refers to the number of statements in your code.           |
+| Miss    | refers to the number of statements that have not been run. |
+| Cover   | is test coverage, or (Stmts - Miss) / 100.                 |
+| Missing | contains the line numbers of the Miss statements.          |
