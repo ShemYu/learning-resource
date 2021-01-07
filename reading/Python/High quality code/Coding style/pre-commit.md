@@ -61,9 +61,11 @@ Numpy, Snorkel, Allennlp 則沒有使用 pre-commit
 > [pre-commit-config.yaml of pytorchlighting](https://github.com/PyTorchLightning/pytorch-lightning/blob/master/.pre-commit-config.yaml)
 
 
+# 
+
 # Reference
 
 1. [提升程式碼品質：使用 Pre-Commit (Git Hooks)](https://mropengate.blogspot.com/2019/08/pre-commit-git-hooks_4.html)
 2. [Intro - pre-commit](https://pre-commit.com/#intro)
 3. [pre-commit-hooks - github](https://github.com/pre-commit/pre-commit-hooks)
-4. 
+   
