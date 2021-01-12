@@ -4,7 +4,9 @@
 
 執行 Coding style 的檢查由於嚴重性並非特別大，因此往往在合作開發時被視為一件**麻煩**的工作，若建置在 CI/ CD 流程上，又會導致以嚴格標準審核(任何錯誤都導致 CI 流程中止) Coding style。
 
-[Pre-commit](https://pre-commit.com/#intro) 會在使用者執行 `git commit` 時，讀取使用者自定義的 `yml` file，自動執行簡單、繁瑣的工作，且 pre-commit, pre-commit-hooks 已經提供大部分 repos 常使用的 Code quality 相關 framework，讓 Contributing 的流程變得更自動化，不再需要記住需執行的檢查步驟等。
+[Pre-commit](https://pre-commit.com/#intro) 會在使用者執行 `git commit` 時，讀取使用者自定義的 `yml` file，建置 git hooks scripts，自動執行簡單、繁瑣的工作，且 pre-commit, pre-commit-hooks 已經提供大部分 repos 常使用的 Code quality 相關 framework，讓 Contributing 的流程變得更自動化，不再需要記住需執行的檢查步驟等。
+
+> [Git hooks](https://git-scm.com/book/zh-tw/v2/Customizing-Git-Git-Hooks)
 
 # Installation
 
@@ -61,7 +63,10 @@ Numpy, Snorkel, Allennlp 則沒有使用 pre-commit
 > [pre-commit-config.yaml of pytorchlighting](https://github.com/PyTorchLightning/pytorch-lightning/blob/master/.pre-commit-config.yaml)
 
 
-# 
+# QA
+
+1. repo 會吃的到 project 當中的 configurations 嗎，還是只有 repo local 吃的到
+2. 
 
 # Reference
 
