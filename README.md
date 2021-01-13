@@ -22,6 +22,16 @@
 
 - [] 偵測筆記較少的 md 標記為未讀文章
 
+# Branch
+
+分支操作使用自定義的形式，大部分規則與一般版控分支 common practice 雷同，規則如下:
+
+| Branch name                 | Descriptions                                                                  |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| master                      | stable version, include reading and ./bin done.                               |
+| read                        | brand of updating feature reading, seam like `dev` branch in common practice. |
+| {some feature develop name} | branch for develop feature.                                                   |
+
 # Contents
 
 - Reading
