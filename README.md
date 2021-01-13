@@ -6,11 +6,13 @@
 
 - [ ] 整合 onenote 筆記至此
 
-- [ ] 優化bin/content.py
+- [ ] auto-gen-contents module
+    - Descriptions
+      - 能自動化依據 reading 目錄下的結構、.md 生成目錄，於 root directory 內的 README 當中供讀者輕鬆找到想找的文章
 	
-	- 辨別多層式目錄，藉此分類文章
-		
-		- 物件化各目錄、子目錄、.md 等內容，結構化數據
+	- Requirments
+    	- 自動生成目錄
+    	- Git hooks - pre-commit phase 自動執行
 
 - [ ] Keyword 自動生成
 
@@ -20,7 +22,10 @@
 
 	- 簡易資料庫串接
 
-- [] 偵測筆記較少的 md 標記為未讀文章
+- [ ] 偵測筆記較少的 md 標記為未讀文章
+
+- [ ] 撰寫 CONTRIBUTING
+- [ ] 撰寫單元測試
 
 # Contents
 
