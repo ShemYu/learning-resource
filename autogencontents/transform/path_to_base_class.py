@@ -11,5 +11,8 @@ class ReadingLoader():
     def _walk(self):
         """Walk path method."""
         print(os.walk(self.path))
+        
+    def _parse(self):
+        passs
     def get_structure(self):
         self._walk()
