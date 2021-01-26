@@ -14,5 +14,3 @@
     中文資源
 
 2. [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/)
-
-    英文資源
