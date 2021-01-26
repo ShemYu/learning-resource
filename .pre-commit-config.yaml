@@ -1,0 +1,7 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: gen_contents
+        name: Automatical generate contents
+        language: python
+        entry: python bin/Contents.py
