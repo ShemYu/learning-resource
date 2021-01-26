@@ -27,6 +27,18 @@
 - [ ] 撰寫 CONTRIBUTING
 - [ ] 撰寫單元測試
 
+## Pre-commit 環境建置
+
+```bash
+# easy install by pip
+$ pip install pre-commit
+
+# install pre-commit framework to git hooks
+$ pre-commit install
+
+# Uninstall if you need
+$ pre-commit uninstall
+```
 # Branch
 
 分支操作使用自定義的形式，大部分規則與一般版控分支 common practice 雷同，規則如下:
