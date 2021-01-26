@@ -1,4 +1,4 @@
-from autogencontens.transform import ReadingLoader
+from autogencontents.transform import ReadingLoader
 
 
 def generate(root_dir='reading'):
