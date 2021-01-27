@@ -1,3 +1,7 @@
+import sys, os
+
+sys.path.append("..")
+
 from autogencontents.transform import ReadingLoader
 
 

@@ -10,9 +10,11 @@ class ReadingLoader():
         self.path = dirs
     def _walk(self):
         """Walk path method."""
-        print(os.walk(self.path))
+        print(123)
+        for path in os.walk(self.path):
+            print(path)
         
     def _parse(self):
-        passs
+        pass
     def get_structure(self):
         self._walk()
