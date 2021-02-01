@@ -1,8 +1,6 @@
 import sys, os
 
-sys.path.append("..")
-
-from autogencontents.transform import ReadingLoader
+from autogencontents.transform import ReadingLoade
 
 
 def generate(root_dir='reading'):

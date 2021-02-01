@@ -3,13 +3,20 @@
 __author__ = "Shem_Yu"
 
 
-class Section():
-    """Sections in contents."""
+class Path():
+    """Path object return by os.walk"""
     def __init__(self):
         pass
 
 
-class MarkdownReading():
+class Section(Path):
+    """Sections in contents."""
+    def __init__(self, path):
+        pass
+
+
+class Reading(Path):
     """Reading in contents"""
     def __init__(self):
         pass
+    
