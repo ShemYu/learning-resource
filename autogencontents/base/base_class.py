@@ -66,3 +66,14 @@ class Reading:
 
     def __repr__(self) -> str:
         return self.name
+
+
+class Readme:
+    def __init__(self):
+        pass
+
+    def load(self):
+        pass
+
+    def update(self):
+        pass
