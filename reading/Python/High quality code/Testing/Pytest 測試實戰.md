@@ -242,4 +242,4 @@ conftest.py 也可以不只存在一個，conftest 生命週期為其所在位�
 
 # Configuration of pytest
 
-Setti
+pytest 的預設 configurations file 優先序依照以下排序:
