@@ -3,7 +3,6 @@ __author__ = "Shem_Yu"
 
 import os
 
-from autogencontents.base.base_class import Path
 
 
 class ReadingLoader:
@@ -20,15 +19,15 @@ class ReadingLoader:
 
     def _walk_and_parse(self):
         """Walk path method."""
+        from autogencontents.base.base_class import Path
         print("Walk through {}".format(self.path))
         Contents = ""
         for walk_result in os.walk(self.path):
             p = Path(walk_result)
             Contents += str(p.sec) + "\n"
             Contents += "\n".join([str(r) for r in p.files])
+            Contents += "\n"
         return Contents
-
+    
     def get_structure(self):
-        contents_str = self._walk_and_parse()
-        print(contents_str)
-        # Do update README.md
+        return self._walk_and_parse()
