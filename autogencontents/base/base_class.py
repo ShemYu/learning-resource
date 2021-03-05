@@ -36,7 +36,7 @@ class Section:
 
     def __init__(self, path):
         self.dirname_list = path.split(_DIR_SEP_TAG)
-        self.depth = len(self.dirname_list) - 2
+        self.depth = len(self.dirname_list) - 1
         self.name = self.dirname_list[-1]
 
     def __str__(self) -> str:
@@ -69,11 +69,56 @@ class Reading:
 
 
 class Readme:
-    def __init__(self):
-        pass
+    def __init__(self, file_path:str="README.md"):
+        self.file_path = file_path
+        self._load()
 
-    def load(self):
-        pass
+    def _load(self, reload_path:str=""):
+        self.file_path = reload_path if reload_path else self.file_path
+        rdmd = open(self.file_path, 'r', encoding="utf8")
+        self._content = rdmd.read()
 
-    def update(self):
-        pass
+    def _save(self):
+        rdmd = open(self.file_path,'w', encoding="utf8")
+        rdmd.write(self.content)
+
+    def __str__(self) -> str:
+        return str(self.content)
+        
+    def __repr__(self) -> str:
+        return str(self.content)
+
+    @property
+    def content(self):
+        return self._content
+    
+    @content.setter
+    def content(self, value):
+        self._content = value
+    
+    @property
+    def abstract(self):
+        self._abstract = self.content.split("# Contents\n\n")[0]
+        return self._abstract
+    
+    @abstract.setter
+    def abstract(self, new_abstract:str = ""):
+        self._abstract = new_abstract
+        self.content = "{}\n# Contents\n\n{}".format(self._abstract, self.contents)
+    
+    @property
+    def contents(self):
+        self._contents = self.content.split("# Contents\n\n")[1]
+        return self._contents
+    
+    @contents.setter
+    def contents(self, new_contents):
+        self._contents = new_contents
+        self.content = "{}# Contents\n\n{}".format(self.abstract, self._contents)
+    
+    def auto_generate_contents(self, root_path="reading"):
+        from autogencontents.transform.path_to_contents import ReadingLoader
+        rl = ReadingLoader(dirs=root_path)
+        new_contents = rl.get_structure()
+        self.contents = new_contents
+        self._save()
