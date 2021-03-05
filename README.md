@@ -48,14 +48,61 @@ $ pre-commit uninstall
 | master                      | stable version, include reading and ./bin done.                               |
 | read                        | brand of updating feature reading, seam like `dev` branch in common practice. |
 | {some feature develop name} | branch for develop feature.                                                   |
-
 # Contents
 
-- Reading
+- reading
+	1. [vscode.md](https://github.com/ShemYu/learning-resource/blob/master//vscode.md)
+	- Data science
+		1. [Data science… without any data.md](https://github.com/ShemYu/learning-resource/blob/master/Data%20science/Data%20science%E2%80%A6%20without%20any%20data.md)
+		1. [資料科學五大 Q&A：如何成為資料科學家？資料科學產業的未來？.md](https://github.com/ShemYu/learning-resource/blob/master/Data%20science/%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E4%BA%94%E5%A4%A7%20Q%26A%EF%BC%9A%E5%A6%82%E4%BD%95%E6%88%90%E7%82%BA%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%EF%BC%9F%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E7%94%A2%E6%A5%AD%E7%9A%84%E6%9C%AA%E4%BE%86%EF%BC%9F.md)
+	- Data scientist roadmap
+		1. [Data scientist roadmap.md](https://github.com/ShemYu/learning-resource/blob/master/Data%20scientist%20roadmap/Data%20scientist%20roadmap.md)
+	- Design Pattern
 
-	1. [Data scientist roadmap](https://github.com/ShemYu/learning-resource/blob/master/reading/Data%20scientist%20roadmap.md)
-
-	1. [親自動手寫一個 Python libary](https://github.com/ShemYu/learning-resource/blob/master/reading/親自動手寫一個%20Python%20libary.md)
-
-	1. [資料科學五大 Q&A：如何成為資料科學家？資料科學產業的未來？](https://github.com/ShemYu/learning-resource/blob/master/reading/資料科學五大%20Q&A：如何成為資料科學家？資料科學產業的未來？.md)
-
+		- Domain-Driven Design
+			1. [1_初探.md](https://github.com/ShemYu/learning-resource/blob/master/Design%20Pattern/Domain-Driven%20Design/1_%E5%88%9D%E6%8E%A2.md)
+	- Docker
+		1. [Docker compose.md](https://github.com/ShemYu/learning-resource/blob/master/Docker/Docker%20compose.md)
+		1. [Docker入門.md](https://github.com/ShemYu/learning-resource/blob/master/Docker/Docker%E5%85%A5%E9%96%80.md)
+	- Git
+		1. [CICD初探.md](https://github.com/ShemYu/learning-resource/blob/master/Git/CICD%E5%88%9D%E6%8E%A2.md)
+		- Github pages
+			1. [Github pages - 輕鬆架設靜態網頁.md](https://github.com/ShemYu/learning-resource/blob/master/Git/Github%20pages/Github%20pages%20-%20%E8%BC%95%E9%AC%86%E6%9E%B6%E8%A8%AD%E9%9D%9C%E6%85%8B%E7%B6%B2%E9%A0%81.md)
+	- Linux
+		1. [鳥哥 Shell script.md](https://github.com/ShemYu/learning-resource/blob/master/Linux/%E9%B3%A5%E5%93%A5%20Shell%20script.md)
+	- Programing
+		1. [Locust preformance testing tool.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/Locust%20preformance%20testing%20tool.md)
+		1. [何謂DevOps.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/%E4%BD%95%E8%AC%82DevOps.md)
+		1. [版本控管基本知識.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/%E7%89%88%E6%9C%AC%E6%8E%A7%E7%AE%A1%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98.md)
+	- Python
+		1. [Anaconda.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Anaconda.md)
+		1. [cmd `python` 預設使用 python3.md](https://github.com/ShemYu/learning-resource/blob/master/Python/cmd%20%60python%60%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20python3.md)
+		1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Decorator.md)
+		1. [Flask.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Flask.md)
+		1. [PEP8.md](https://github.com/ShemYu/learning-resource/blob/master/Python/PEP8.md)
+		1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/master/Python/PIP.md)
+		1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
+		1. [親自動手寫一個 Python libary.md](https://github.com/ShemYu/learning-resource/blob/master/Python/%E8%A6%AA%E8%87%AA%E5%8B%95%E6%89%8B%E5%AF%AB%E4%B8%80%E5%80%8B%20Python%20libary.md)
+		- bin
+			1. [decorator.ipynb](https://github.com/ShemYu/learning-resource/blob/master/Python/bin/decorator.ipynb)
+		- High quality code
+			1. [Code quality.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Code%20quality.md)
+			1. [Common practice of famous project.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Common%20practice%20of%20famous%20project.md)
+			- Coding style
+				1. [black.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/black.md)
+				1. [Coding style.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/Coding%20style.md)
+				1. [pylint.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/pylint.md)
+				- pre-commit
+					1. [1_調研 pre-commit.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/pre-commit/1_%E8%AA%BF%E7%A0%94%20pre-commit.md)
+					1. [2_pre-commit.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/pre-commit/2_pre-commit.md)
+					1. [3_pre-commit 三度調研.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/pre-commit/3_pre-commit%20%E4%B8%89%E5%BA%A6%E8%AA%BF%E7%A0%94.md)
+			- Docs
+				1. [pydocstyle.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Docs/pydocstyle.md)
+			- Testing
+				1. [Flaky test.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Flaky%20test.md)
+				1. [Pytest Coverage.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20Coverage.md)
+				1. [Pytest doctest.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20doctest.md)
+				1. [Pytest 測試實戰.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20%E6%B8%AC%E8%A9%A6%E5%AF%A6%E6%88%B0.md)
+				1. [初探Tox.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/%E5%88%9D%E6%8E%A2Tox.md)
+		- Pyproject
+			1. [How to setup.py.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Pyproject/How%20to%20setup.py.md)
