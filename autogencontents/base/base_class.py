@@ -51,10 +51,10 @@ class Reading:
         self.section = sec
         self.name = name
         # https://github.com/{OWNER_NAME}/{REPO_NAME}/blob/master/{PATH_TO_READING}/{READING_NAME}
-        self.url = "https://github.com/{}/{}/blob/master/{}/{}".format(
+        self.url = "https://github.com/{}/{}/blob/read/{}/{}".format(
             _OWNER_NAME,
             _REPO_NAME,
-            parse.quote("/".join(self.section.dirname_list[1:])),
+            parse.quote("/".join(self.section.dirname_list)),
             parse.quote(self.name),
         )
 
