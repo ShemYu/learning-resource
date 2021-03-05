@@ -62,10 +62,12 @@ $ pre-commit uninstall
 		- Domain-Driven Design
 			1. [1_初探.md](https://github.com/ShemYu/learning-resource/blob/master/Design%20Pattern/Domain-Driven%20Design/1_%E5%88%9D%E6%8E%A2.md)
 	- Docker
+		1. [3_Docker 基本運作.md](https://github.com/ShemYu/learning-resource/blob/master/Docker/3_Docker%20%E5%9F%BA%E6%9C%AC%E9%81%8B%E4%BD%9C.md)
 		1. [Docker compose.md](https://github.com/ShemYu/learning-resource/blob/master/Docker/Docker%20compose.md)
 		1. [Docker入門.md](https://github.com/ShemYu/learning-resource/blob/master/Docker/Docker%E5%85%A5%E9%96%80.md)
 	- Git
 		1. [CICD初探.md](https://github.com/ShemYu/learning-resource/blob/master/Git/CICD%E5%88%9D%E6%8E%A2.md)
+		1. [版本號的基本常識.md](https://github.com/ShemYu/learning-resource/blob/master/Git/%E7%89%88%E6%9C%AC%E8%99%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%B8%B8%E8%AD%98.md)
 		- Github pages
 			1. [Github pages - 輕鬆架設靜態網頁.md](https://github.com/ShemYu/learning-resource/blob/master/Git/Github%20pages/Github%20pages%20-%20%E8%BC%95%E9%AC%86%E6%9E%B6%E8%A8%AD%E9%9D%9C%E6%85%8B%E7%B6%B2%E9%A0%81.md)
 	- Linux
@@ -73,21 +75,24 @@ $ pre-commit uninstall
 	- Programing
 		1. [Locust preformance testing tool.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/Locust%20preformance%20testing%20tool.md)
 		1. [何謂DevOps.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/%E4%BD%95%E8%AC%82DevOps.md)
-		1. [版本控管基本知識.md](https://github.com/ShemYu/learning-resource/blob/master/Programing/%E7%89%88%E6%9C%AC%E6%8E%A7%E7%AE%A1%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98.md)
 	- Python
 		1. [Anaconda.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Anaconda.md)
-		1. [cmd `python` 預設使用 python3.md](https://github.com/ShemYu/learning-resource/blob/master/Python/cmd%20%60python%60%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20python3.md)
-		1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Decorator.md)
 		1. [Flask.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Flask.md)
-		1. [PEP8.md](https://github.com/ShemYu/learning-resource/blob/master/Python/PEP8.md)
-		1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/master/Python/PIP.md)
-		1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
+		1. [如何用 Python 撰寫 APP.md](https://github.com/ShemYu/learning-resource/blob/master/Python/%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E6%92%B0%E5%AF%AB%20APP.md)
+		1. [如何處理比 memory 更大的資料.md](https://github.com/ShemYu/learning-resource/blob/master/Python/%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E6%AF%94%20memory%20%E6%9B%B4%E5%A4%A7%E7%9A%84%E8%B3%87%E6%96%99.md)
 		1. [親自動手寫一個 Python libary.md](https://github.com/ShemYu/learning-resource/blob/master/Python/%E8%A6%AA%E8%87%AA%E5%8B%95%E6%89%8B%E5%AF%AB%E4%B8%80%E5%80%8B%20Python%20libary.md)
-		- bin
-			1. [decorator.ipynb](https://github.com/ShemYu/learning-resource/blob/master/Python/bin/decorator.ipynb)
+		- Basic
+			1. [cmd `python` 預設使用 python3.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Basic/cmd%20%60python%60%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20python3.md)
+			1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Basic/Decorator.md)
+			1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Basic/PIP.md)
+			1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Basic/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
+		- Class
+			1. [Meta class.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Class/Meta%20class.md)
+			1. [__new__ and __init__.md](https://github.com/ShemYu/learning-resource/blob/master/Python/Class/__new__%20and%20__init__.md)
 		- High quality code
 			1. [Code quality.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Code%20quality.md)
 			1. [Common practice of famous project.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Common%20practice%20of%20famous%20project.md)
+			1. [PEP8.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/PEP8.md)
 			- Coding style
 				1. [black.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/black.md)
 				1. [Coding style.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Coding%20style/Coding%20style.md)
@@ -102,6 +107,7 @@ $ pre-commit uninstall
 				1. [Flaky test.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Flaky%20test.md)
 				1. [Pytest Coverage.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20Coverage.md)
 				1. [Pytest doctest.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20doctest.md)
+				1. [Pytest notebook.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20notebook.md)
 				1. [Pytest 測試實戰.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/Pytest%20%E6%B8%AC%E8%A9%A6%E5%AF%A6%E6%88%B0.md)
 				1. [初探Tox.md](https://github.com/ShemYu/learning-resource/blob/master/Python/High%20quality%20code/Testing/%E5%88%9D%E6%8E%A2Tox.md)
 		- Pyproject
