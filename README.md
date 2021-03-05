@@ -15,6 +15,8 @@
 - [ ] Contents generator optimize and new feature
     - [ ] 依照筆記量釋出不同顏色標籤
       - [ ] 偵測筆記較少的 md 標記為`尚未完成
+      - 實作
+        - [X] 完成 Progressor 類別設計
     - [ ] 架構優化
     - [ ] Keyword 自動生成
     	- 從文本當中超連結自動爬入字串，以較為泛用的方式前處理並提取關鍵詞
@@ -82,6 +84,7 @@ $ pre-commit uninstall
 		- Basic
 			1. [cmd `python` 預設使用 python3.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/cmd%20%60python%60%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20python3.md)
 			1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Decorator.md)
+			1. [Magic method.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Magic%20method.md)
 			1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/PIP.md)
 			1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
 		- Class
