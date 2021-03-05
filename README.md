@@ -4,8 +4,7 @@
 
 ## Todo
 
-- [ ] 整合 onenote 筆記至此
-
+### Development
 - [X] auto-gen-contents module
     - Descriptions
       - 能自動化依據 reading 目錄下的結構、.md 生成目錄，於 root directory 內的 README 當中供讀者輕鬆找到想找的文章
@@ -15,18 +14,13 @@
     	- Git hooks - pre-commit phase 自動執行
 - [ ] Contents generator optimize and new feature
     - [ ] 依照筆記量釋出不同顏色標籤
+      - [ ] 偵測筆記較少的 md 標記為`尚未完成
     - [ ] 架構優化
+    - [ ] Keyword 自動生成
+    	- 從文本當中超連結自動爬入字串，以較為泛用的方式前處理並提取關鍵詞
+  	- [ ] auto-gen module 建置於 pre-commit phase 自動執行產生目錄
 
-- [ ] Keyword 自動生成
-
-	- 從文本當中超連結自動爬入字串，以較為泛用的方式前處理並提取關鍵詞
-
-- [ ] Google sheets api
-
-	- 簡易資料庫串接
-
-- [ ] 偵測筆記較少的 md 標記為未讀文章
-
+### Operations
 - [ ] 撰寫 CONTRIBUTING
 - [ ] 撰寫單元測試
 
