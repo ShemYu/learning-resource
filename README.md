@@ -19,6 +19,7 @@
     - [ ] Keyword 自動生成
     	- 從文本當中超連結自動爬入字串，以較為泛用的方式前處理並提取關鍵詞
   	- [ ] auto-gen module 建置於 pre-commit phase 自動執行產生目錄
+  	- [ ] 閱讀狀況數據統計報表
 
 ### Operations
 - [ ] 撰寫 CONTRIBUTING
