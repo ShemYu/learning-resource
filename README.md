@@ -13,6 +13,9 @@
 	- Requirments
     	- 自動生成目錄
     	- Git hooks - pre-commit phase 自動執行
+- [ ] Contents generator optimize and new feature
+    - [ ] 依照筆記量釋出不同顏色標籤
+    - [ ] 架構優化
 
 - [ ] Keyword 自動生成
 
