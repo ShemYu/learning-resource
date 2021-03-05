@@ -6,7 +6,7 @@
 
 - [ ] 整合 onenote 筆記至此
 
-- [ ] auto-gen-contents module
+- [X] auto-gen-contents module
     - Descriptions
       - 能自動化依據 reading 目錄下的結構、.md 生成目錄，於 root directory 內的 README 當中供讀者輕鬆找到想找的文章
 	
