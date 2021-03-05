@@ -71,7 +71,7 @@ $ sudo docker run -t -i ubuntu:12.04 /bin/bash
 root@fe7fc4bd8fc9:/#
 ```
 
-```docker image``` 則會列出已經有的映像檔。
+```docker images``` 則會列出已經有的映像檔。
 
 ```console
 $ sudo docker images
