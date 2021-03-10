@@ -1,3 +1,10 @@
+# 底線家族的秘密 
+### Medium 讀書心得
+> ### 原文 [Python Tricks — 底線家族的秘密](https://medium.com/python-language/python-tricks-%E5%BA%95%E7%B7%9A%E5%AE%B6%E6%97%8F%E7%9A%84%E7%A7%98%E5%AF%86-d84a2ce9cde6)
+
+
+補充讀書心得
+
 # Magic method of Python
 
 Magic method 指的是 Pyhton 為類別預定義的一些常用方法，例如定義類別的字串形式、實作時執行的方法、運算單元處理的方法等。
