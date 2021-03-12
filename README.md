@@ -84,9 +84,9 @@ $ pre-commit uninstall
 		- Basic
 			1. [cmd `python` 預設使用 python3.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/cmd%20%60python%60%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20python3.md)
 			1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Decorator.md)
-			1. [Magic method.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Magic%20method.md)
 			1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/PIP.md)
 			1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
+			1. [底線與命名規則.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/%E5%BA%95%E7%B7%9A%E8%88%87%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87.md)
 		- Class
 			1. [Meta class.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Class/Meta%20class.md)
 			1. [__new__ and __init__.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Class/__new__%20and%20__init__.md)
