@@ -88,6 +88,7 @@ $ pre-commit uninstall
 			1. [.gitingore.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/.gitingore.md)
 			1. [Anaconda.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Anaconda.md)
 			1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Decorator.md)
+			1. [Enum.ipynb](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Enum.ipynb)
 			1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/PIP.md)
 			1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
 			1. [Python 當中的 switch case.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E7%95%B6%E4%B8%AD%E7%9A%84%20switch%20case.md)
