@@ -80,16 +80,17 @@ $ pre-commit uninstall
 			- img
 				1. [20210312181535.png](https://github.com/ShemYu/learning-resource/blob/read/reading/Programing/%E5%89%8D%E7%AB%AF/img/20210312181535.png)
 	- Python
-		1. [Anaconda.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Anaconda.md)
 		1. [Flask.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Flask.md)
 		1. [如何用 Python 撰寫 APP.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/%E5%A6%82%E4%BD%95%E7%94%A8%20Python%20%E6%92%B0%E5%AF%AB%20APP.md)
 		1. [如何處理比 memory 更大的資料.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/%E5%A6%82%E4%BD%95%E8%99%95%E7%90%86%E6%AF%94%20memory%20%E6%9B%B4%E5%A4%A7%E7%9A%84%E8%B3%87%E6%96%99.md)
 		1. [親自動手寫一個 Python libary.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/%E8%A6%AA%E8%87%AA%E5%8B%95%E6%89%8B%E5%AF%AB%E4%B8%80%E5%80%8B%20Python%20libary.md)
 		- Basic
 			1. [.gitingore.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/.gitingore.md)
+			1. [Anaconda.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Anaconda.md)
 			1. [Decorator.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Decorator.md)
 			1. [PIP.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/PIP.md)
 			1. [Python 在 DevOps 中的應用.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E5%9C%A8%20DevOps%20%E4%B8%AD%E7%9A%84%E6%87%89%E7%94%A8.md)
+			1. [Python 當中的 switch case.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/Python%20%E7%95%B6%E4%B8%AD%E7%9A%84%20switch%20case.md)
 			1. [`python` command 預設使用 Python3.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/%60python%60%20command%20%E9%A0%90%E8%A8%AD%E4%BD%BF%E7%94%A8%20Python3.md)
 			1. [函式基本概念.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/%E5%87%BD%E5%BC%8F%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
 			1. [底線與命名規則.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Basic/%E5%BA%95%E7%B7%9A%E8%88%87%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87.md)
@@ -121,3 +122,5 @@ $ pre-commit uninstall
 				1. [初探Tox.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/High%20quality%20code/Testing/%E5%88%9D%E6%8E%A2Tox.md)
 		- Pyproject
 			1. [How to setup.py.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Pyproject/How%20to%20setup.py.md)
+		- Signals
+			1. [基本概念.md](https://github.com/ShemYu/learning-resource/blob/read/reading/Python/Signals/%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.md)
