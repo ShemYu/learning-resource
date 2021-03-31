@@ -11,6 +11,10 @@ class MyClass(metaclass=MyMeta):
 
 class MySubclass(MyClass):
     pass
+
+if __name__ == "__main__":
+    MyClass = MyMeta()
+    my_object = MyClass()
 ```
 
 簡單的定義三種不同的類別:
