@@ -14,10 +14,11 @@ Pytest 有以下幾項優點：
     原生 assert 的運用
 
     ```python
-    # Pytest
-    assert a == b
-    # unittest
-    self.assertEqual(a, b)
+    def test_is_equal(a, b):
+        # Pytest
+        assert a == b
+        # unittest
+        self.assertEqual(a, b)
     ```
 
 1. 可讀性強
@@ -53,24 +54,28 @@ Pytest 有以下幾項優點：
     - 偵測方式 : 
         
         從當前目錄底下搜尋 ```test_``` 開頭或是 ```_test``` 結尾之測試程式檔案進行測試
-        
 
+- 指定目錄
+    
     ```bash
     $ pytest {Options} {test_path}
     ```
 
-- 指定目錄
+- 指定 function or class
 
     透過```::```指定程式當中的方法或類別，可同時指定多個目錄或檔案
 
     ```bash
-    $ python {*.py or path/u/want}::{function_name or ClassName}
+    $ pytest {*.py or path/u/want}::{function_name or ClassName}
     ```
+
+- 指定 Class 當中之 function
+
     或甚至指定類別當中的特定方法
     ```bash
     $ pytest {*.py or path/u/want}::{ClassName}::{function_of_the_Calss}
     ```
-    例如
+    Example
     ```
     $ pytest tests/creature/animal.py::Dog::eat
     ```
@@ -140,23 +145,30 @@ Pytest 會逐測試程式當中每個 function ，依照測試結果標記為以
 
 ### **skip**
 ```python
-@pytest.mark.skip(reason="not done")
+@pytest.mark.skip(reason="Module update, not finish yet.")
 def test_function_1():
-    do something
+    ...
 ```
 ### **skipif**
 ```python
 @pytest.mark.skipif(version < "0.2.0", reason="not support until ver. 0.2.0")
 def test_function_2():
-    do something
+    """Test for version < 0.2.0"""
+    ...
 ```
-
-### **xfail**
-預期測試失敗，例如想測試是否輸入錯誤的變數型態、
+### **Customize mark**
+自行定義的標籤，用以分類測試
 ```python
-@pytest.mark.xfail(reason="not done")
+@pytest.mark.load
+def test_loading():
+    ...
+```
+### **xfail**
+預期測試失敗，用以測試是否會 raise Exception。
+```python
+@pytest.mark.xfail(reason="Its suppost to be failed.")
 def test_function_1():
-    do something
+    raise Exception
 ```
 
 也由於 XPASS 的定義較為模糊，可以在 pytest.ini 中設定為嚴格模式，將 XPASS 視為 FAILED。
@@ -206,29 +218,32 @@ def test_of_something():
 
 ## Parametrized testing
 
-When testing some method should repeatly call the same method, you can use pytest decorater `@pytest.mark.parametrize` to loop the same method with different parameters.
+When testing some method should repeatly call the same method, you can use pytest decorater `@pytest.mark.parameterize` to loop the same method with different parameters.
 
-當有些較為繁瑣，必須重複執行的測試，需要藉由 testcase 完整覆蓋測試邏輯時，可以藉由 `@pytest.mark.parametrize` 對同一個 method 迴圈輸入指定的參數。
+當有些較為繁瑣，必須重複執行的測試，需要藉由 testcase 完整覆蓋測試邏輯時，可以藉由 `@pytest.mark.parameterize` 對同一個 method 迴圈輸入指定的參數。
 
 ```python
-import ptest
-@pytest.mark.parametrize('num', [1, 2, 3, 4, 5, 6, 7, 8, 9])
+import pytest
+
+num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+@pytest.mark.parameterize('num', num_list)
 def test_is_odd(num):
     assert num%2 == 0
 ```
 
-You can assign multi arguments for sure.
+<!-- You can assign multi arguments for sure. -->
 
-當然也可以輸入多個參數。
+<!-- 當然也可以輸入多個參數。 -->
 
 ```python
-@pytest.mark.parametrize('num1, num2', 
-                        [
-                            (1, 2),
-                            (3, 4),
-                            (5, 6)
-                        ]
-                        )
+args_list = [
+    (1, 2),
+    (3, 4),
+    (5, 6)
+]
+
+@pytest.mark.parameterize('num1, num2', args_list)
 def test_add(num1, num2):
     assert add(num1, num2) == num1+num2
 ```
@@ -239,6 +254,17 @@ fixture 是提供 pytest 測試前後配置的模塊，提供完整的測試配�
 
 conftest.py 也可以不只存在一個，conftest 生命週期為其所在位置之子目錄，可以把其視為該層級底下之 fixture 倉庫。
 
+```python
+@pytest.fixture(scope="session")
+def data_file():
+    with open("data/file.txt", "r") as f:
+        return f.read()
+```
+```python
+def test_funtion_a(data_file):
+    function_a(data_file)
+    ...
+```
 
 # Configuration of pytest
 
